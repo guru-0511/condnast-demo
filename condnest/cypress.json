@@ -7,6 +7,9 @@
         "overwrite": true,
         "html": true,
         "json": true
-      }
+      },
+      "video":false,
+      "responseTimeout": 120000,
+      "defaultCommandTimeout": 60000
 }
 
