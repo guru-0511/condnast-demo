@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-13T08:48:46.150Z",
+    "end": "2021-07-13T08:48:49.311Z",
+    "duration": 3161,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "002724e6-3b38-4c7e-849f-5ae949e4cb91",
+      "title": "",
+      "fullFile": "cypress/integration/1-getting-started/artical_assertion_test.spec.js",
+      "file": "cypress/integration/1-getting-started/artical_assertion_test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5f2cda83-8618-4021-85e7-ff10a18fc325",
+          "title": "condenast API response testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Assert the response body with different methods",
+              "fullTitle": "condenast API response testing Assert the response body with different methods",
+              "timedOut": null,
+              "duration": 1535,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Response from mock API response\ncy.request('GET', '/?us_site=y&format=json', {\n  fixtures: 'response.json'\n}).then(res => {\n  //Response form server API response\n  //  cy.request('GET','/?us_site=y&format=json').then((res)=>{\n  expect(res.status).to.be.equal(200);\n  expect(res.body).not.to.be.null; //description of the story\n  //using contains text to assert it \n  cy.fixture('july_month').then(data => {\n    expect(res.body.bundle.containers[0].items[0].dangerousDek).to.be.contains(data.desription); //Description Head\n    //using equal method to assert it\n    expect(res.body.bundle.containers[0].items[0].dangerousHed).to.be.equal(data.heading); //Story author\n    //using include method to assert it\n    expect(res.body.bundle.containers[0].items[0].contributors.author.items[0].name).to.be.include(data.author);\n  });\n});",
+              "err": {},
+              "uuid": "ac009f07-bed6-4c8e-ad1e-a30bcf89bf73",
+              "parentUUID": "5f2cda83-8618-4021-85e7-ff10a18fc325",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "get the all container name",
+              "fullTitle": "condenast API response testing get the all container name",
+              "timedOut": null,
+              "duration": 780,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', '/?us_site=y&format=json').then(res => {\n  let len = res.body.bundle.containers.length;\n  for (let i = 0; i < len; i++) {\n    cy.log(res.body.bundle.containers[i].dangerousHed);\n  }\n});",
+              "err": {},
+              "uuid": "ea998c02-038c-4fbb-a9f4-332a0ae50449",
+              "parentUUID": "5f2cda83-8618-4021-85e7-ff10a18fc325",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get the Artical Title, Description and Author of first container",
+              "fullTitle": "condenast API response testing Get the Artical Title, Description and Author of first container",
+              "timedOut": null,
+              "duration": 796,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', '/?us_site=y&format=json').then(res => {\n  let len = res.body.bundle.containers[0].items.length;\n  cy.log(len);\n  for (let i = 0; i < len; i++) {\n    cy.log(`Artial Title  = ${res.body.bundle.containers[0].items[i].dangerousHed}`);\n    cy.log(`Artical Description  = ${res.body.bundle.containers[0].items[i].dangerousDek}`);\n    cy.log(`Artical Author = ${res.body.bundle.containers[0].items[i].contributors.author.items[0].name}`);\n  }\n});",
+              "err": {},
+              "uuid": "8c8f3813-a556-4dde-b0ee-024386bf8d8a",
+              "parentUUID": "5f2cda83-8618-4021-85e7-ff10a18fc325",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ac009f07-bed6-4c8e-ad1e-a30bcf89bf73",
+            "ea998c02-038c-4fbb-a9f4-332a0ae50449",
+            "8c8f3813-a556-4dde-b0ee-024386bf8d8a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3111,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "reportFilename": "report",
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
