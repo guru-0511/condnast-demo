@@ -1,0 +1,201 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-09-02T12:08:56.604Z",
+    "end": "2021-09-02T12:09:07.215Z",
+    "duration": 10611,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a277b04f-ae6a-424a-aeb6-a4fab8a9687f",
+      "title": "",
+      "fullFile": "cypress/integration/google.spec.js",
+      "file": "cypress/integration/google.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "30aff89d-0d21-450c-93a5-e43c845aaa38",
+          "title": "Book A ticket",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify the URL navigate to home scrren.",
+              "fullTitle": "Book A ticket verify the URL navigate to home scrren.",
+              "timedOut": null,
+              "duration": 8503,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-cy=mmtLogo] > img').should('be.visible');",
+              "err": {},
+              "uuid": "cc3a9127-ac0b-458f-9ecf-4aad1a75a056",
+              "parentUUID": "30aff89d-0d21-450c-93a5-e43c845aaa38",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Select Round trip option",
+              "fullTitle": "Book A ticket Select Round trip option",
+              "timedOut": null,
+              "duration": 172,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-cy=roundTrip]').click({\n  force: true\n});",
+              "err": {},
+              "uuid": "936f789f-128f-4b13-985e-890947ee53aa",
+              "parentUUID": "30aff89d-0d21-450c-93a5-e43c845aaa38",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Select From place option",
+              "fullTitle": "Book A ticket Select From place option",
+              "timedOut": null,
+              "duration": 705,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-cy=fromCity]').click();\ncy.get('[placeholder=From]').type('Hyderabed');\ncy.contains('Hyderabad, India').click({\n  force: true\n});",
+              "err": {},
+              "uuid": "4cb53a85-febb-4d77-a087-75adbff061f2",
+              "parentUUID": "30aff89d-0d21-450c-93a5-e43c845aaa38",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Select To place option",
+              "fullTitle": "Book A ticket Select To place option",
+              "timedOut": null,
+              "duration": 593,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#toCity').click({\n  force: true\n});\ncy.get('[placeholder=To]').click({\n  force: true\n}).type('chennai');\ncy.contains('Chennai, India').click({\n  force: true\n});",
+              "err": {},
+              "uuid": "d9973d2f-599a-43a8-8705-26e45f3ba0f7",
+              "parentUUID": "30aff89d-0d21-450c-93a5-e43c845aaa38",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Depature Date",
+              "fullTitle": "Book A ticket Depature Date",
+              "timedOut": null,
+              "duration": 267,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#departure').click({\n  force: true\n});\ncy.get('[aria-label=\"Tue Sep 21 2021\"]').click({\n  force: true\n});",
+              "err": {},
+              "uuid": "d9f02ac4-900d-4d47-8710-c166764d6fad",
+              "parentUUID": "30aff89d-0d21-450c-93a5-e43c845aaa38",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Depature Date",
+              "fullTitle": "Book A ticket Depature Date",
+              "timedOut": null,
+              "duration": 295,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#departure').click({\n  force: true\n});\ncy.contains('26').first().click({\n  force: true\n});",
+              "err": {},
+              "uuid": "5b333f56-f27a-4d3e-854b-2ce7518c2216",
+              "parentUUID": "30aff89d-0d21-450c-93a5-e43c845aaa38",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cc3a9127-ac0b-458f-9ecf-4aad1a75a056",
+            "936f789f-128f-4b13-985e-890947ee53aa",
+            "4cb53a85-febb-4d77-a087-75adbff061f2",
+            "d9973d2f-599a-43a8-8705-26e45f3ba0f7",
+            "d9f02ac4-900d-4d47-8710-c166764d6fad",
+            "5b333f56-f27a-4d3e-854b-2ce7518c2216"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10535,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "reportFilename": "report",
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

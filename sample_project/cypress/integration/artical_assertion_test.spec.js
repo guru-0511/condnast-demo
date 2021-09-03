@@ -2,9 +2,9 @@
 
 
 describe('condenast API response testing', () => {
-  before(()=>{
-    cy.visit('/?us_site=y')
-  })
+  // before(()=>{
+  //   cy.visit('/?us_site=y')
+  // })
 
   it('Assert the response body with different methods', () => {
     // Response from mock API response
@@ -30,7 +30,6 @@ describe('condenast API response testing', () => {
   it('get the avialable container name', () => {
     cy.request('GET', '/?us_site=y&format=json').then((res) => {
       let len = (res.body.bundle.containers).length
-
       for (let i = 0; i < len; i++) {
         if (res.body.bundle.containers[i].dangerousHed)
           cy.log(` Artical Heading =  ${res.body.bundle.containers[i].dangerousHed} `)

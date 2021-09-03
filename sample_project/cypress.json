@@ -1,5 +1,5 @@
 {
-    "baseUrl": "https://www.cntraveler.com/",
+  "baseUrl":"https://www.makemytrip.com/",
     "reporter":"mochawesome",
     "reporterOptions": {
         "reportDir": "cypress/results",
@@ -9,7 +9,9 @@
         "json": true
       },
       "video":false,
-      "responseTimeout": 120000,
-      "defaultCommandTimeout": 60000
+      "responseTimeout": 12000,
+      "defaultCommandTimeout": 12000,
+      "viewportWidth": 1000,
+      "viewportHeight": 800
 }
 
