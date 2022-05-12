@@ -17,7 +17,7 @@ describe("verify the coupon page section", () => {
     cy.get(selectors.element.couponStoreItem).should("have.length", 14);
   });
 
-  it("verify the Top Stores contains Url are active”", () => {
+  it("verify the Top Stores contains Url and its navigate to correct item", () => {
     cy.get(selectors.element.topStoreList).then(($test) => {
       for (let i = 0; i < $test.length; i++) {
         const txt = $test[i].outerText

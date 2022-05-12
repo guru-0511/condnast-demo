@@ -2,7 +2,7 @@
   "baseUrl":"https://iprice.my/",
     "reporter":"mochawesome",
     "reporterOptions": {
-        "reportDir": "cypress/results",
+        "reportDir": "sample_project/cypress/results",
         "reportFilename": "report",
         "overwrite": true,
         "html": true,
@@ -13,6 +13,7 @@
       "defaultCommandTimeout": 12000,
       "viewportWidth": 1000,
       "viewportHeight": 800,
-      "retries":3
+      "retries":3,
+      "testFiles": "**/*.{feature,features}"
 }
 
