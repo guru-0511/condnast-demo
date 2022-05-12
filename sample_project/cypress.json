@@ -1,5 +1,5 @@
 {
-  "baseUrl":"https://www.makemytrip.com/",
+  "baseUrl":"https://iprice.my/",
     "reporter":"mochawesome",
     "reporterOptions": {
         "reportDir": "cypress/results",
