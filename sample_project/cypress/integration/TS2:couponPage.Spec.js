@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-const { selectors } = require("../selectors/selectors");
+import { selectors } from "../selectors/selectors";
 
 describe("verify the coupon page section", () => {
   before(() => {
@@ -11,7 +11,7 @@ describe("verify the coupon page section", () => {
     cy.title().should("eq", selectors.element.couponsPage);
   });
 
-  it(" verify the top store section should appears", () => {
+  it("verify the top store section should appears", () => {
     cy.get("header h2").contains("Top Stores");
     cy.get(selectors.element.topStoresTitle).first().should("be.visible");
     cy.get(selectors.element.couponStoreItem).should("have.length", 14);
