@@ -8,7 +8,7 @@ describe("verify the coupon page section", () => {
   });
 
   it("verify the page navigate to home page ", () => {
-    cy.title().should("eq", selectors.element.couponsPage);
+    cy.title().should("eq",selectors.element.couponsPage);
   });
 
   it("verify the top store section should appears", () => {
@@ -26,8 +26,9 @@ describe("verify the coupon page section", () => {
           .slice(-1)
           .join(" ");
         cy.get(selectors.element.topStoreIcon).eq(i).click();
-        cy.url().should("include", txt);
+        cy.url().should("include", txt.replace('.', ''));
         cy.get(selectors.element.breadcrumb).first().click();
+        //cy.get(selectors.element.movie).should('be.selected')
       }
     });
   });

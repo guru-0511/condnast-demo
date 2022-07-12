@@ -2,15 +2,14 @@
 import { selectors } from "../selectors/selectors";
 
 describe('verify the best Deals Online section', () => {
-    before(()=>{
-      cy.visit('/')
+    before(()=>{ // hook mocha -hook ( before, after, beforeEach, afterEach)
+      cy.visit("https://iprice.my/")
     })
 
     it('verify the page navigate to home page ',() => {
         cy.title()
-          .should('eq', selectors.element.homeTitle)
+          .should('eq',"Online Shopping, Coupons & Discount Code at iprice Malaysia")
         })  
-        
     it('verify the 20 stores icons should appears' ,() => {
         cy.get(selectors.element.storeList)
            .should('have.length', 20)
@@ -20,3 +19,4 @@ describe('verify the best Deals Online section', () => {
         cy.get(selectors.element.trendingProductsList).should("have.attr" , 'data-vars-cgt')
         })    
 })
+
